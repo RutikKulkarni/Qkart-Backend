@@ -1,8 +1,5 @@
 .checkout-shipping {
   padding: 2em;
-  /* Reduce 70px of header and 100px of footer
-  ** Make footer display at bottom even if less content on main page
-  */
   min-height: calc(100vh - 170px);
 }
 .checkout-container {
@@ -19,8 +16,6 @@
 .address {
   margin-right: 20px;
   margin-bottom: 20px;
-
-  /* height: 100%; */
 }
 .address-box {
   display: flex;

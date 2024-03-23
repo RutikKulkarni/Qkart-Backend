@@ -50,7 +50,6 @@ describe("Cart routes", () => {
         .set("Authorization", `Bearer ${userOneAccessToken}`)
         .send();
 
-      // TODO: CRIO_TASK_MODULE_TEST - Assert if status code is "400 BAD REQUEST"
       //  expect(true).toEqual(false);
       expect(res.status).toEqual(httpStatus.BAD_REQUEST);
       
@@ -67,7 +66,6 @@ describe("Cart routes", () => {
         .set("Authorization", `Bearer ${userTwoAccessToken}`)
         .send();
 
-      // TODO: CRIO_TASK_MODULE_TEST - Assert if status code is 400
       //  expect(true).toEqual(false);
       expect(res.status).toEqual(httpStatus.BAD_REQUEST);
     });
@@ -82,7 +80,6 @@ describe("Cart routes", () => {
         .set("Authorization", `Bearer ${userOneAccessToken}`)
         .send();
 
-      // TODO: CRIO_TASK_MODULE_TEST - Assert if status code is 400
       //  expect(true).toEqual(false);
       expect(res.status).toEqual(httpStatus.BAD_REQUEST)
     });
@@ -96,12 +93,8 @@ describe("Cart routes", () => {
         .set("Authorization", `Bearer ${userOneAccessToken}`)
         .send();
 
-      // TODO: CRIO_TASK_MODULE_TEST - Assert if status code is 204
       //  expect(true).toEqual(false);
       expect(res.status).toEqual(httpStatus.NO_CONTENT); 
-      // TODO: CRIO_TASK_MODULE_TEST - Get the cart for "userOne" and assert if
-      // - Cart exists
-      // - Length of "cartItems" array is 0
       const databaseCart = await Cart.findOne({email: userOne.email})
       expect(databaseCart).toBeDefined()
       expect(databaseCart.cartItems.length).toEqual(0)

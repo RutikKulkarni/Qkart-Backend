@@ -35,7 +35,6 @@ export default class Header extends React.Component {
 
         {this.props.children}
 
-        {/* Display links based on if the user's logged in or not */}
         <div className="header-action">
           {localStorage.getItem("username") ? (
             <>

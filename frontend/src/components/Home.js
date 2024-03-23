@@ -6,7 +6,6 @@ import "./Home.css";
 export default function App() {
   return (
     <>
-      {/* Display "Home" page content */}
       <div className="flex-container">
         <div className="home-container container">
           <h1 className="home-welcome-text">
